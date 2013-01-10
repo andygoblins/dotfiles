@@ -1,0 +1,1 @@
+OPTIONS=autoquiver, color, disclose:+i +a yv +c, fruit:banana, hilite_pet, pickup_types:$, showrace, !cmdassist
