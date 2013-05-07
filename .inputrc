@@ -1,0 +1,2 @@
+#When in Windows, do as DOS does.
+set completion-ignore-case on
