@@ -19,6 +19,7 @@ alias la="ls -la"
 # keyboard
 source "${HOME}/.goblinkeys.zsh"
 bindkey -A goblin main
+bindkey ' ' magic-space
 
 # misc
 setopt autolist # automatically list suggested tab completions
