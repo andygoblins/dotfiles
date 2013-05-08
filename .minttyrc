@@ -1,7 +1,7 @@
-BoldAsFont=no
+BoldAsFont=yes
 Locale=en_US
 Charset=UTF-8
-Font=Monaco
+Font=Liberation Mono
 FontHeight=11
 Columns=70
 Rows=25
@@ -10,3 +10,6 @@ CursorType=block
 CursorBlinks=no
 ClicksPlaceCursor=yes
 PgUpDnScroll=yes
+ForegroundColour=255,255,255
+BoldAsColour=yes
+Term=xterm-256color

@@ -1,9 +1,9 @@
-Rxvt.geometry:	79x30
-Rxvt.buffered:	true
-Rxvt.background:	black
-Rxvt.foreground:	white
-Rxvt.cursorColor:	white
+Rxvt.geometry:	        79x30
+Rxvt.buffered:	        true
+Rxvt.background:	    black
+Rxvt.foreground:	    white
+Rxvt.cursorColor:	    white
 Rxvt.underlineColor:	green
 Rxvt.scrollBar_right:	true
-Rxvt.scrollstyle:	plain
+Rxvt.scrollstyle:	    plain
 Rxvt.font:              Inconsolata-14
