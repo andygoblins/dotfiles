@@ -35,13 +35,13 @@ bind M-c cancel all
 bind ^o left all
 bind ^e down all
 bind ^u right all
-bind ^. up all
+bind F13 up all #only for Andy's hacked nano
 bind M-o prevword all
 bind M-e endpara main
 bind M-u nextword all
 bind M-. beginpara main
 bind ^p end all
-bind ^, home all
+bind F14 home all #only for Andy's hacked nano
 
 # insert/delete
 bind ^Space mark all
