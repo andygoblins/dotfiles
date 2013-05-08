@@ -16,6 +16,10 @@ alias ls='ls --color=auto'
 alias ll="ls -l"
 alias la="ls -la"
 
+# keyboard
+source "${HOME}/.goblinkeys.zsh"
+bindkey -A goblin main
+
 # misc
 setopt autolist # automatically list suggested tab completions
 setopt correct # spellcheck
