@@ -10,6 +10,7 @@ bindkey -N goblin .safe
 bindkey -M goblin "^V" quoted-insert
 bindkey -M goblin "^I" expand-or-complete
 bindkey -M goblin "^[s" spell-word
+bindkey -M goblin "^[g" send-break
 
 # navigation
 bindkey -M goblin "^[[1;5l" beginning-of-line #ctl-, in mintty
@@ -48,7 +49,7 @@ bindkey -M goblin "^@" set-mark-command
 
 # searching
 bindkey -M goblin "^F" history-incremental-search-forward
-bindkey -M goblin "^R" history-incremental-search-backward
+bindkey -M goblin "^[f" history-incremental-search-backward
 
 # text
 bindkey -M goblin "^[c" up-case-word
