@@ -14,9 +14,13 @@ bindkey -M goblin "^[g" send-break
 
 # navigation
 bindkey -M goblin "^[[1;5l" beginning-of-line #ctl-, in mintty
+bindkey -M goblin "^[[H" beginning-of-line #home
 bindkey -M goblin "^[," beginning-of-history
+bindkey -M goblin "^[[1;3H" beginning-of-history #alt-home
 bindkey -M goblin "^P" end-of-line
+bindkey -M goblin "^[[F" end-of-line #end
 bindkey -M goblin "^[p" end-of-history
+bindkey -M goblin "^[[1;3F" end-of-history #alt-end
 bindkey -M goblin "^O" backward-char
 bindkey -M goblin "^[[D" backward-char #left
 bindkey -M goblin "^[o" backward-word
@@ -36,7 +40,9 @@ bindkey -M goblin "^[[1;5A" beginning-of-history #ctl-up
 
 # deletions
 bindkey -M goblin "^D" delete-char-or-list
+bindkey -M goblin "^[[3~" delete-char-or-list #delete
 bindkey -M goblin "^[d" delete-word
+bindkey -M goblin "^[[3;5~" delete-word #ctl-delete
 bindkey -M goblin "^?" backward-delete-char
 bindkey -M goblin "^_" backward-delete-word #ctl-bs in mintty
 
