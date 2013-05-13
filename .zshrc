@@ -26,6 +26,7 @@ alias la="ls -la"
 source "${HOME}/.goblinkeys.zsh"
 bindkey -A goblin main
 bindkey -M goblin ' ' magic-space
+bindkey -M goblin '^^' push-line-or-edit #ctl-enter
 
 # completions
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate _prefix
