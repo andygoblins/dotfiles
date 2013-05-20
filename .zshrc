@@ -1,7 +1,7 @@
 # prompt
 PROMPT='%(0?.%F{green}✓.%F{red}✘)%F{red}▐%f%B%K{red} %n@%m %~%F{black}░▒%b%k%f'
 #autoload -U colors && colors
-#PROMPT="%(0?.%{$fg_no_bold[green]%}✓.%{fg_no_bold[red]%}✘)%{$fg_no_bold[red]%}▐%{$reset_color%}%{$bg[red]%} %n@%m %~%{$fg[black]%}░▒%{$reset_color%}"
+#PROMPT="%(0?.%{$fg_no_bold[green]%}✓.%{$fg_no_bold[red]%}✘)%{$fg_no_bold[red]%}▐%{$reset_color%}%{$bg[red]%} %n@%m %~%{$fg[black]%}░▒%{$reset_color%}"
 
 # history
 setopt APPEND_HISTORY HIST_FIND_NO_DUPS
