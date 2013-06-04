@@ -4,7 +4,7 @@ PROMPT='%(0?.%F{green}✓.%F{red}✘)%F{red}▐%f%B%K{red} %n@%m %~%F{black}░�
 #PROMPT="%(0?.%{$fg_no_bold[green]%}✓.%{$fg_no_bold[red]%}✘)%{$fg_no_bold[red]%}▐%{$reset_color%}%{$bg[red]%} %n@%m %~%{$fg[black]%}░▒%{$reset_color%}"
 
 # history
-setopt APPEND_HISTORY HIST_FIND_NO_DUPS
+setopt APPEND_HISTORY HIST_FIND_NO_DUPS HISTIGNORESPACE
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE='1000'
 SAVEHIST="${HISTSIZE}"
@@ -21,6 +21,7 @@ export LS_COLORS="$LS_COLORS:*.tar=33:*.tgz=33:*.tbz=33:*.tbz2=33:*.tb2=33:*.tlz
 alias ls='ls --color=auto'
 alias ll="ls -l"
 alias la="ls -la"
+alias lfind="find . -name"
 
 # keyboard
 source "${HOME}/.goblinkeys.zsh"
