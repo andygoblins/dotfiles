@@ -1,0 +1,6 @@
+# ignore all files...
+*
+# ...except those beginning with .'s
+!.*
+# and those ending in ~
+*~
