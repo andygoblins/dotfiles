@@ -18,6 +18,7 @@ alias xemacs="emacs"
 alias nethack="setxkbmap us && nethack && setxkbmap us dvorak"
 
 export TERM="xterm"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/share/java/apache-ant/bin:/usr/lib/perl5/vendor_perl/bin:/usr/lib/perl5/core_perl/bin:/home/andy/bin"
-export EDITOR="emacs"
+export PATH="/usr/bin:~/bin"
+export EDITOR="nano"
 export HISTCONTROL=ignoreboth:erasedups
+export BUILDDIR="/home/andy/abs"
