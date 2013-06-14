@@ -42,7 +42,6 @@ zstyle ':completion:*' menu select=long
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' squeeze-slashes true
-zstyle :compinstall filename '/cygdrive/c/Users/caud355/.zshrc'
 
 autoload -Uz compinit && compinit
 
