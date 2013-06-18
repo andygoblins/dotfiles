@@ -11,7 +11,7 @@ SAVEHIST="${HISTSIZE}"
 
 # variables
 export EDITOR="/usr/bin/nano"
-export PATH="$PATH:~/john/run"
+export PATH="$PATH:$HOME/john/run:$HOME/go/bin"
 # basic ls colors
 export LS_COLORS="di=01;34:fi=0:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01"
 # archive ls colors
