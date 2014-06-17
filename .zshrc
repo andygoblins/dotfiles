@@ -10,19 +10,24 @@ HISTSIZE='1000'
 SAVEHIST="${HISTSIZE}"
 
 # variables
-export GOPATH="/cygdrive/c/go"
+export GOPATH="$HOME/Desktop/go"
 export EDITOR="/usr/bin/nano"
-export PATH="$PATH:$HOME/john/run:$GOPATH/bin"
+export PATH="$PATH:$HOME/john/run:/cygdrive/c/Go/bin"
+export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.7.0_45"
 # basic ls colors
 export LS_COLORS="di=01;34:fi=0:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01"
 # archive ls colors
 export LS_COLORS="$LS_COLORS:*.tar=33:*.tgz=33:*.tbz=33:*.tbz2=33:*.tb2=33:*.tlz=33:*.txz=33:*.gz=33:*.bz2=33:*.xz=33:*.lz=33:*.lzma=33:*.7z=33"
+export PERL5LIB=~/perl5/lib/perl5
+export PERL_MB_OPT="--install_base '$HOME/perl5'"
+export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 
 # aliases
 alias ls='ls --color=auto'
 alias ll="ls -l"
 alias la="ls -la"
 alias lfind="find . -name"
+alias npp="/cygdrive/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 
 # keyboard
 source "${HOME}/.goblinkeys.zsh"
