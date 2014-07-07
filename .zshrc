@@ -28,6 +28,7 @@ alias ll="ls -l"
 alias la="ls -la"
 alias lfind="find . -name"
 alias npp="/cygdrive/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
+alias ecl="/cygdrive/c/Program\ Files\ \(x86\)/EclipseSDK/4.2.1/eclipse/eclipse.exe"
 
 # keyboard
 source "${HOME}/.goblinkeys.zsh"
