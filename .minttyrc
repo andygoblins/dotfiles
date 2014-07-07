@@ -13,3 +13,5 @@ PgUpDnScroll=yes
 ForegroundColour=255,255,255
 BoldAsColour=yes
 Term=xterm-256color
+CopyAsRTF=no
+RightClickAction=paste
