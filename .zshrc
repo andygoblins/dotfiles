@@ -12,7 +12,7 @@ SAVEHIST="${HISTSIZE}"
 # variables
 export GOPATH="$HOME/Desktop/go"
 export EDITOR="/usr/bin/nano"
-export PATH="$PATH:$HOME/john/run:/cygdrive/c/Go/bin:$HOME/perl5"
+export PATH="$PATH:$HOME/john/run:/cygdrive/c/Go/bin:$HOME/perl5/bin"
 export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.7.0_45"
 # basic ls colors
 export LS_COLORS="di=01;34:fi=0:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01"
