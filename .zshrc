@@ -10,7 +10,6 @@ HISTSIZE='1000'
 SAVEHIST="${HISTSIZE}"
 
 # variables
-export GOPATH="$HOME/Desktop/go"
 export EDITOR="/usr/bin/nano"
 export PATH="$PATH:$HOME/john/run:/cygdrive/c/Go/bin:$HOME/perl5/bin"
 export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.7.0_45"
