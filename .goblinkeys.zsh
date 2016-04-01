@@ -52,6 +52,7 @@ bindkey -M goblin "^R" yank
 bindkey -M goblin "^[r" yank-pop
 bindkey -M goblin "^K" kill-line
 bindkey -M goblin "^@" set-mark-command
+bindkey -M goblin "^[[200~" bracketed-paste
 
 # searching
 bindkey -M goblin "^F" history-incremental-search-forward
