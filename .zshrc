@@ -11,7 +11,7 @@ SAVEHIST="${HISTSIZE}"
 
 # variables
 export EDITOR="/usr/bin/nano"
-export PATH="$PATH:$HOME/john/run:/cygdrive/c/Go/bin:$HOME/perl5/bin"
+export PATH="$PATH:$HOME/john/run:/cygdrive/c/Go/bin:$HOME/perl5/bin:$HOME/scripts/todo.txt_cli-2.10"
 export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.7.0_45"
 # basic ls colors
 export LS_COLORS="di=01;34:fi=0:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01"
@@ -28,6 +28,7 @@ alias la="ls -la"
 alias lfind="find . -name"
 alias npp="/cygdrive/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 alias ecl="/cygdrive/c/Program\ Files\ \(x86\)/EclipseSDK/4.2.1/eclipse/eclipse.exe"
+alias t='todo.sh -a'
 
 # keyboard
 source "${HOME}/.goblinkeys.zsh"
