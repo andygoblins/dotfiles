@@ -4,3 +4,5 @@
 !.*
 # and those ending in ~
 *~
+# but ignore history files
+*history
