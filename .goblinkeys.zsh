@@ -14,11 +14,13 @@ bindkey -M goblin "^[g" send-break
 
 # navigation
 bindkey -M goblin "^[[1;5l" beginning-of-line #ctl-, in mintty
-bindkey -M goblin "^[[H" beginning-of-line #home
+bindkey -M goblin "^[[H" beginning-of-line #PC-style home
+bindkey -M goblin "^[[1~" beginning-of-line #vt220 home
 bindkey -M goblin "^[," beginning-of-history
 bindkey -M goblin "^[[1;3H" beginning-of-history #alt-home
 bindkey -M goblin "^P" end-of-line
-bindkey -M goblin "^[[F" end-of-line #end
+bindkey -M goblin "^[[F" end-of-line #PC-style end
+bindkey -M goblin "^[[4~" end-of-line #vt220 end
 bindkey -M goblin "^[p" end-of-history
 bindkey -M goblin "^[[1;3F" end-of-history #alt-end
 bindkey -M goblin "^O" backward-char
@@ -40,9 +42,11 @@ bindkey -M goblin "^[[1;5A" beginning-of-history #ctl-up
 
 # deletions
 bindkey -M goblin "^D" delete-char-or-list
-bindkey -M goblin "^[[3~" delete-char-or-list #delete
+bindkey -M goblin "^[[P" delete-char-or-list #PC-style delete
+bindkey -M goblin "^[[3~" delete-char-or-list #vt220 delete
 bindkey -M goblin "^[d" delete-word
-bindkey -M goblin "^[[3;5~" delete-word #ctl-delete
+bindkey -M goblin "^[[M" delete-word #PC-style ctl-delete
+bindkey -M goblin "^[[3;5~" delete-word #vt220 ctl-delete
 bindkey -M goblin "^?" backward-delete-char
 bindkey -M goblin "^H" backward-delete-word #ctl-bs
 bindkey -M goblin "^_" backward-delete-word #ctl-bs in mintty
