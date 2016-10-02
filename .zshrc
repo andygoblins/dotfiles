@@ -1,5 +1,5 @@
 # prompt
-PROMPT='%(0?.%F{green}✓.%F{red}✘)%F{red}▐%f%B%K{red} %n@%m %~ %F{red}%K{black}▓▒░%b%k%f'
+PROMPT='%(0?.%F{green}✓.%F{red}✘)%F{red}▐%f%B%K{red} %n@%m %~ %b%F{red}%K{black}▓▒░%k%f'
 #autoload -U colors && colors
 #PROMPT="%(0?.%{$fg_no_bold[green]%}✓.%{fg_no_bold[red]%}✘)%{$fg_no_bold[red]%}▐%{$fg_bold[white]$bg[red]%} %n@%m %~ %{$fg_no_bold[red]$bg[black]%}▓▒░%{$reset_color%}"
 
