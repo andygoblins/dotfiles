@@ -44,6 +44,7 @@ bindkey -M goblin "^[[3~" delete-char-or-list #delete
 bindkey -M goblin "^[d" delete-word
 bindkey -M goblin "^[[3;5~" delete-word #ctl-delete
 bindkey -M goblin "^?" backward-delete-char
+bindkey -M goblin "^H" backward-delete-word #ctl-bs
 bindkey -M goblin "^_" backward-delete-word #ctl-bs in mintty
 
 # copy/paste
@@ -67,4 +68,3 @@ bindkey -M goblin "^[t" transpose-words
 # misc
 bindkey -M goblin "^Z" undo
 bindkey -M goblin "^[z" redo
-bindkey -M goblin "^H" run-help
