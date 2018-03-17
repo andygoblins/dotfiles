@@ -17,14 +17,3 @@ alias temacs="emacs -nw"
 alias xemacs="emacs"
 alias nano="nano -w"
 alias nethack="setxkbmap us && nethack && setxkbmap us dvorak"
-
-export TERM="xterm"
-export PATH="/usr/bin:~/bin"
-export EDITOR="nano"
-export HISTCONTROL=ignoreboth:erasedups
-export BUILDDIR="/home/andy/abs"
-export GOPATH="$HOME/workspace"
-export CHROME_BIN="/usr/bin/chromium"
-
-# configure plan9 stuff
-source /etc/profile.d/plan9.sh
