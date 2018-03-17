@@ -6,3 +6,8 @@
 *~
 # but ignore history files
 *history
+# and zsh completion data
+.zcompdump
+# and sensitive files
+*auth*
+*password*
