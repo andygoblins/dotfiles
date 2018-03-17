@@ -8,6 +8,7 @@ setopt APPEND_HISTORY HIST_FIND_NO_DUPS HISTIGNORESPACE
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE='1000'
 SAVEHIST="${HISTSIZE}"
+LESSHISTFILE=/dev/null
 
 # variables
 export EDITOR="/usr/bin/nano"
