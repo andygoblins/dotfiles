@@ -1,0 +1,35 @@
+font Go Mono:size=12
+tabs 4
+expandtabs false
+autoindent true
+snarfselection primary
+followfocus true
+
+# Here be bindings
+bind C space command jump
+
+## Goblinkeys Navigation
+bind * Down command linedown
+bind * Up command lineup
+bind * Left command charleft
+bind * Right command charright
+bind C u command charright
+bind C o command charleft
+#bind C . command lineup
+bind C e command linedown
+bind C BackSpace command delword
+bind C d command del
+#bind C , command eol
+bind C p command bol
+bind C Home command bol
+
+## CUA, with Goblin flair
+bind C c command snarf
+bind C g command cut
+bind C r command paste
+bind C s command write
+bind C f command search
+bind C z command send u
+
+# Chords
+chord 1 13 cut current
