@@ -4,6 +4,7 @@ expandtabs false
 autoindent true
 snarfselection primary
 followfocus true
+background #e3eafd:#fdf6e3:#eafde3:#f6e3fd
 
 # Here be bindings
 bind C space command jump
@@ -15,13 +16,14 @@ bind * Left command charleft
 bind * Right command charright
 bind C u command charright
 bind C o command charleft
-#bind C . command lineup
+bind C period command lineup
 bind C e command linedown
 bind C BackSpace command delword
 bind C d command del
-#bind C , command eol
-bind C p command bol
-bind C Home command bol
+bind C p command eol
+bind * End command eol
+bind C comma command bol
+bind * Home command bol
 
 ## CUA, with Goblin flair
 bind C c command snarf
