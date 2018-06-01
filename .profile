@@ -1,4 +1,4 @@
-LC_CTYPE="en_US.UTF_8"
+LC_CTYPE="en_US.UTF-8"
 EDITOR=/usr/bin/nano
 VISUAL=/usr/bin/nano
 GOPATH=~/hack
