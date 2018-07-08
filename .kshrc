@@ -15,7 +15,6 @@ alias la="ls -la"
 ## terminal stuff
 bind '^V'=quote
 bind '^I'=complete-list
-bind '^M'=newline-and-next
 bind '^L'=redraw
 bind '^[ '=expand-file
 
