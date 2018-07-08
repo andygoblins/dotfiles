@@ -1,6 +1,12 @@
 LC_CTYPE="en_US.UTF_8"
-EDITOR=/usr/bin/nano
-VISUAL=/usr/bin/nano
+if [ `uname` != Linux ]
+then
+	EDITOR=/usr/local/bin/nano
+else
+	EDITOR=/usr/bin/nano
+fi
+VISUAL=$EDITOR
+
 GOPATH=~/hack
 PATH=$PATH:~/bin
 LESSHISTFILE=/dev/null
