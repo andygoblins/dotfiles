@@ -5,7 +5,7 @@ PROMPT='%(0?.%F{green}✓.%F{red}✘)%F{red}▐%f%B%K{red} %n@%m %~ %b%F{red}%K{
 
 # history
 setopt APPEND_HISTORY HIST_FIND_NO_DUPS HISTIGNORESPACE
-HISTFILE="${HOME}/.zsh_history"
+HISTFILE="${ZDOTDIR}/.zsh_history"
 HISTSIZE='1000'
 SAVEHIST="${HISTSIZE}"
 
