@@ -15,7 +15,7 @@ alias ll="ls -l"
 alias la="ls -la"
 
 # keyboard
-source "${HOME}/.goblinkeys.zsh"
+source "${ZDOTDIR}/.goblinkeys.zsh"
 bindkey -A goblin main
 bindkey -M goblin ' ' magic-space
 bindkey -M goblin '^^' push-line-or-edit #ctl-enter

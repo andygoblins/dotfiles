@@ -10,6 +10,7 @@ SUDO_EDIT=$EDITOR
 
 GNUPGHOME=~/.config/gnupg
 ZDOTDIR=~/.config/zsh
+NETHACKOPTIONS=@~/.config/nethack/.nethackrc
 
 GOPATH=~/hack
 PATH=$PATH:~/bin
