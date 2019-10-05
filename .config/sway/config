@@ -1,0 +1,160 @@
+set {
+	$fg "#888888"
+	$bg "#323232"
+	$fgsel "#eeeeee"
+	$bgsel "#cd0000"
+	$bgurg "#cdcd00"
+	$fgurg $fgsel
+	$f "Hack"
+	$fs "14"
+	$pfont "pango:$f, Font Awesome 5 Free Solid $fs"
+	$xfont "$f:size=$fs"
+
+	$ws1 1:
+	$ws2 2:
+	$ws9 9:
+	$ws0 10:
+
+	$mod Mod4
+	$left o
+	$down e
+	$up Period
+	$right u
+
+	$term st
+	$menu j4-dmenu-desktop --dmenu="dmenu -i -sb '$bgsel' -fn $xfont"
+	$lock swaylock -f -n -r -c $bg --inside-color $bg --inside-ver-color $bgurg --inside-wrong-color $bgsel --ring-ver-color $bgurg
+}
+
+# Style
+client.unfocused $bg $bg $fg $bg $bg
+client.focused_inactive $bg $bg $fg $bg $bg
+client.focused $bgsel $bgsel $fgsel $bgurg $bgsel
+client.urgent $bgurg $bgurg $fgurg $bgurg $bgurg
+
+# I/O
+output * {
+	resolution 1920x1080
+	background $bg solid_color
+}
+
+input type:keyboard {
+	xkb_layout "us"
+	xkb_variant "dvorak"
+}
+
+input 6134:2087:Unicomp_Inc_Ruffian6_x_Dvrk_Kbrd_v3_45 {
+	xkb_layout "us"
+	xkb_variant ""
+}
+
+exec swayidle -w \
+		timeout 300 'swaymsg "output * dpms off"' \
+			 resume 'swaymsg "output * dpms on"' \
+		timeout 600 '$lock' \
+		lock '$lock' \
+		before-sleep '$lock'
+exec udiskie -a2TN --notify-command "pkill -RTMIN+11 i3blocks"
+exec megasync
+
+floating_modifier $mod normal
+
+bindsym {
+	$mod+Return exec $term
+	$mod+Space exec $menu
+	$mod+F5 reload
+	$mod+l exec $lock
+	$mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+	XF86AudioRaiseVolume exec amixer -q -D default sset Master 5%+ && pkill -RTMIN+10 i3blocks
+	XF86AudioLowerVolume exec amixer -q -D default sset Master 5%- && pkill -RTMIN+10 i3blocks
+	XF86AudioMute exec amixer -q -D default sset Master toggle && pkill -RTMIN+10 i3blocks
+	XF86MonBrightnessDown exec light -U 5
+	XF86MonBrightnessUp exec light -A 5
+
+	# Windows and layout
+	$mod+Shift+c kill
+	$mod+h splith
+	$mod+v splitv
+	$mod+Tab workspace back_and_forth
+	$mod+s layout stacking
+	$mod+t layout toggle split tabbed
+	$mod+f floating toggle
+	$mod+m fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    $mod+Shift+space floating toggle
+    
+	# Move focus to the parent container
+    $mod+a focus parent
+
+	# Focus
+	$mod+$left focus left
+	$mod+$down focus down
+	$mod+$up focus up
+	$mod+$right focus right
+	$mod+Left focus left
+	$mod+Down focus down
+	$mod+Up focus up
+	$mod+Right focus right
+
+	# Moving
+	$mod+Shift+$left move left
+	$mod+Shift+$down move down
+	$mod+Shift+$up move up
+	$mod+Shift+$right move right
+	$mod+Shift+Left move left
+	$mod+Shift+Down move down
+	$mod+Shift+Up move up
+	$mod+Shift+Right move right
+
+	$mod+1 workspace $ws1
+	$mod+2 workspace $ws2
+	$mod+3 workspace 3
+	$mod+4 workspace 4
+	$mod+5 workspace 5
+	$mod+6 workspace 6
+	$mod+7 workspace 7
+	$mod+8 workspace 8
+	$mod+9 workspace $ws9
+	$mod+0 workspace $ws0
+
+	$mod+Shift+1 move container to workspace $ws1
+	$mod+Shift+2 move container to workspace $ws2
+	$mod+Shift+3 move container to workspace 3
+	$mod+Shift+4 move container to workspace 4
+	$mod+Shift+5 move container to workspace 5
+	$mod+Shift+6 move container to workspace 6
+	$mod+Shift+7 move container to workspace 7
+	$mod+Shift+8 move container to workspace 8
+	$mod+Shift+9 move container to workspace $ws9
+	$mod+Shift+0 move container to workspace $ws0
+}
+bindswitch {
+	tablet:on exec ~/.config/sway/tablet_toggle on
+	tablet:off exec ~/.config/sway/tablet_toggle off
+}
+
+for_window [app_id="zenity"] floating enable
+for_window [class="code-oss"] move window to workspace $ws2
+for_window [class="Steam"] move window to workspace $ws9
+for_window [class="firefox"] move window to workspace $ws0
+
+# don't sleep when app runs full screen
+for_window [title="."] inhibit_idle fullscreen
+for_window [title="."] border pixel 2
+
+bar {
+    position top
+    strip_workspace_numbers yes
+    status_command i3blocks
+    font $pfont
+	status_padding 0
+    colors {
+        background $bg
+        statusline $fgsel
+        inactive_workspace $bg $bg $fg
+		focused_workspace $bgsel $bgsel $fgsel
+		urgent_workspace $bgurg $bgurg $fgurg
+    }
+}
