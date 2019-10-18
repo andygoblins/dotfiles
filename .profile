@@ -3,6 +3,9 @@ export LC_CTYPE=en_US.UTF-8
 if [ `uname` != Linux ]
 then
 	EDITOR=/usr/local/bin/nano
+	export QT_QPA_PLATFORM=wayland-egl
+	export CLUTTER_BACKEND=wayland
+	export SDL_VIDEODRIVER=wayland
 else
 	EDITOR=/usr/bin/nano
 fi
