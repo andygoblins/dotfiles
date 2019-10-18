@@ -22,7 +22,7 @@ set {
 	$right u
 
 	$term st
-	$menu j4-dmenu-desktop --dmenu="dmenu -i -sb '$bgsel' -fn $xfont"
+	$menu j4-dmenu-desktop --term=st --dmenu="dmenu -i -sb '$bgsel' -fn $xfont"
 	$lock swaylock -f -n -r -c $bg --inside-color $bg --inside-ver-color $bgurg --inside-wrong-color $bgsel --ring-ver-color $bgurg
 }
 
