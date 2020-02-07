@@ -1,0 +1,18 @@
+#!/bin/sh
+
+acpi -b | sed 's/[,%]//g' | awk '{
+	charge = $3 == "Charging" ? "" : ""
+	bat = ""
+	if($4 > 75) {
+		bat = ""
+	} else if ($4 > 50) {
+		bat = ""
+	} else if($4 > 25) {
+		bat = ""
+	} else {
+		bat = ""
+	}
+	printf("%s %s %s% (%s)\n", charge, bat, $4, substr($5, 1, length($5)-3))
+	printf("%s %s %s% \n", charge, bat, $4)
+	exit $4 > 15 ? 0 : 33
+}'

@@ -4,10 +4,18 @@
 !.*
 # and those ending in ~
 *~
-# but ignore history files
+# but ignore this stuff
 *history
-# and zsh completion data
-.zcompdump
-# and sensitive files
 *auth*
 *password*
+.steam*
+.quake*
+.bitcoin
+.plan_for_world_domination
+.Trump_tax_returns
+.things_to_hide_from_NSA
+.perpetual_motion_tests
+.black_helicopters
+.zcompdump
+.pulse-cookie
+.wine
