@@ -4,5 +4,10 @@
 !.*
 # and those ending in ~
 *~
-# but ignore history files
+# but ignore this stuff
 *history
+*auth*
+*password*
+.zcompdump
+.gitconfig
+.condarc
