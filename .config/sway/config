@@ -54,7 +54,7 @@ exec swayidle -w \
 		timeout 600 '$lock' \
 		lock '$lock' \
 		before-sleep '$lock'
-exec udiskie -a2TN --notify-command "pkill -RTMIN+11 i3blocks"
+exec udiskie -aTN --notify-command "pkill -RTMIN+11 i3blocks"
 exec megasync
 
 floating_modifier $mod normal
