@@ -48,6 +48,7 @@ input 6134:2087:Unicomp_Inc_Ruffian6_x_Dvrk_Kbrd_v3_45 {
 	xkb_variant ""
 }
 
+exec lxsession #handles policykit prompts
 exec swayidle -w \
 		timeout 300 'swaymsg "output * dpms off"' \
 			 resume 'swaymsg "output * dpms on"' \

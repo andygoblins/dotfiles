@@ -19,6 +19,7 @@ export NETHACKOPTIONS=@~/.config/nethack/.nethackrc
 export LESSHISTFILE=/dev/null
 export MC_XDG_OPEN=~/bin/nohup-open
 export ENV=~/.kshrc
+export WINEPREFIX=~/.local/wine
 
 export GOPATH=~/hack
 export PATH=$PATH:~/bin:~/.local/bin
