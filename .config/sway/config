@@ -83,11 +83,11 @@ bindsym {
 	$mod+f floating toggle
 	$mod+m fullscreen
 
-    # Toggle the current focus between tiling and floating mode
-    $mod+Shift+space floating toggle
+	# Toggle the current focus between tiling and floating mode
+	$mod+Shift+space floating toggle
     
 	# Move focus to the parent container
-    $mod+a focus parent
+	$mod+a focus parent
 
 	# Focus
 	$mod+$left focus left
@@ -130,10 +130,13 @@ bindsym {
 	$mod+Shift+8 move container to workspace 8
 	$mod+Shift+9 move container to workspace $ws9
 	$mod+Shift+0 move container to workspace $ws0
+
+	$mod+Alt+Right exec ~/.config/sway/output_rotate clockwise
+	$mod+Alt+Left exec ~/.config/sway/output_rotate anticlockwise
 }
 bindswitch {
-	tablet:on exec ~/.config/sway/tablet_toggle on
-	tablet:off exec ~/.config/sway/tablet_toggle off
+	tablet:on exec ~/.config/sway/output_rotate clockwise
+	tablet:off exec ~/.config/sway/output_rotate anticlockwise
 }
 
 for_window [app_id="zenity"] floating enable

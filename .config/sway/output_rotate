@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# output_rotate rotates the current screen.
+
+# hardcoded tablet screen name
+tablet_out=eDP-1
+
+[ $# -ne 1 ] && exit 1
+
+if [ $1 = clockwise ] || [ $1 = anticlockwise ]; then
+	active_out=`swaymsg -pt get_outputs | awk '/^Output.*focused/{print $2}'`
+	swaymsg output $active_out transform 90 $1	
+	if [ $active_out = $tablet_out ]; then
+		# re-map tablet because screen rotated
+		swaymsg "input type:tablet_tool map_to_output $tablet_out"
+	fi
+
+fi
