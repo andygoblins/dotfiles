@@ -1,9 +1,12 @@
 #!/bin/sh
 
-udiskie-info -a -o "{is_mounted} {device_file} {id_label} {id_uuid}" | awk '/True/{
-	name=$3 #label, or uuid if label is blank
-	cmd="df -h -P -l "$2
-	cmd | getline 
-	cmd | getline
-	printf("%s %s(%s) ", name, $2, $5)
-} END {print "\n"}'
+case $BLOCK_BUTTON in
+	3) udiskie-umount -ae ;; # unmount on right click
+	*) udiskie-info -a -o "{is_mounted} {device_file} {id_label} {id_uuid}" | awk '/True/{
+		name=$3 #label, or uuid if label is blank
+		cmd="df -h -P -l "$2
+		cmd | getline 
+		cmd | getline
+		printf("%s %s(%s) ", name, $2, $5)
+	   } END {print "\n"}' ;;
+esac
