@@ -8,6 +8,8 @@ else
 	export QT_QPA_PLATFORM=wayland-egl
 	export CLUTTER_BACKEND=wayland
 	export SDL_VIDEODRIVER=wayland
+	# fix broken Java Swing apps
+	export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 VISUAL=$EDITOR
 SUDO_EDIT=$EDITOR
