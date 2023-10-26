@@ -23,7 +23,7 @@ set {
 	$right u
 
 	$term st
-	$menu j4-dmenu-desktop --term=st --dmenu="dmenu -i -sb '$bgsel' -fn $xfont"
+	$menu fuzzel -Ffilename,name,generic,exec,keywords,categories
 	$lock swaylock -f -n -r -c $bg --inside-color $bg --inside-ver-color $bgurg --inside-wrong-color $bgsel --ring-ver-color $bgurg
 }
 
@@ -32,6 +32,7 @@ client.unfocused $bg $bg $fg $bg $bg
 client.focused_inactive $bg $bg $fg $bg $bg
 client.focused $bgsel $bgsel $fgsel $bgurg $bgsel
 client.urgent $bgurg $bgurg $fgurg $bgurg $bgurg
+default_border pixel 2
 
 # I/O
 output * {
@@ -55,7 +56,14 @@ input 4617:8963:Keyboardio_Atreus_Keyboard {
 	xkb_variant ""
 }
 
-exec lxsession #handles policykit prompts
+# handle policykit prompts
+exec lxsession
+
+# setup gnome-keyring
+# (make sure you've edited /etc/pam.d/login to include pam_gnome_keyring.so)
+exec eval $(gnome-keyring-daemon --start)
+exec export SSH_AUTH_SOCK
+
 exec swayidle -w \
 		timeout 300 'swaymsg "output * dpms off"' \
 			 resume 'swaymsg "output * dpms on"' \
@@ -63,13 +71,14 @@ exec swayidle -w \
 		lock '$lock' \
 		before-sleep '$lock'
 exec udiskie -aTN --notify-command "pkill -RTMIN+11 i3blocks"
-exec megasync
+exec QT_QPA_PLATFORM=xcb megasync
 
 floating_modifier $mod normal
 
 bindsym {
 	$mod+Return exec $term
 	$mod+Space exec $menu
+    $mod+Semicolon exec ~/.config/sway/emoji_picker.sh
 	$mod+F5 reload
 	$mod+l exec $lock
 	$mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
@@ -154,7 +163,6 @@ for_window [class="firefox"] move window to workspace $ws0
 
 # don't sleep when app runs full screen
 for_window [title="."] inhibit_idle fullscreen
-for_window [title="."] border pixel 2
 
 bar {
     position top
